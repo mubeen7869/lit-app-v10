@@ -24,7 +24,7 @@ export default function Login({ handleSignup }) {
     function handlePassword(e) {
         const value = e.target.value;
         setPassword(value);
-        setPasswordError(passwordRegex.test(value) ? "" : "Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one digit, and one special character");
+        setPasswordError(passwordRegex.test(value) ? "" : "Password is incorrect");
     }
 
     async function login(e) {
@@ -35,7 +35,7 @@ export default function Login({ handleSignup }) {
                 setEmailError("Enter a valid email address");
             }
             else if (!passwordRegex.test(password)) {
-                setPasswordError("Password must contain at least 8 characters, including one uppercase letter, one lowercase letter, one digit, and one special character");
+                setPasswordError("Password is incorrect");
             }
             else {
                 const user = await loginUser({ email, password });

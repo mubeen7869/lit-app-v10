@@ -339,11 +339,13 @@ export default function Vender_registration() {
     const extension = fileName.substring(fileName.lastIndexOf('.'));
     if (!allowedExtensions.includes(extension)) {
       e.target.value = ''; // Clear the file input
-      alert('Please upload a Word document (.doc or .docx) only.');
+      setErrorMessage('Please upload a Word document (.doc or .docx) only.');
       return;
     }
     setCvFile(file);
+    setErrorMessage('');
   }}
+ 
   required
 />
           

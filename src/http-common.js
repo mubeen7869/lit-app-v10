@@ -268,3 +268,14 @@ export const DataById = async (id) => {
     throw error;
   }
 };
+
+export const userDetails = async () => {
+  try {
+    const response = await api.get(`http://localhost:3043/littuss/hr/userdetails`);
+    console.log(response);
+    return response.data;
+  } catch (error) {
+    console.error('Error fetching client data:', error);
+    throw error;
+  }
+};
