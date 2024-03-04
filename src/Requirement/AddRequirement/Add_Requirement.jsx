@@ -200,7 +200,7 @@ const Add_Requirement = () => {
                 value={fullName}
                 onChange={handleFullNameChange}
               />
-              {fullNameError && <span className="error">{fullNameError}</span>}
+              {fullNameError && <span className="error-message">{fullNameError}</span>}
             </td>
           </tr>
  
@@ -214,7 +214,7 @@ const Add_Requirement = () => {
                 value={experience}
                 onChange={handleExperienceChange}
               />
-              {experienceError && <span className="error">{experienceError}</span>}
+              {experienceError && <span className="error-message">{experienceError}</span>}
             </td>
           </tr>
  
@@ -228,7 +228,7 @@ const Add_Requirement = () => {
                 value={clientName}
                 onChange={handleClientNameChange}
               />
-              {clientNameError && <span className="error">{clientNameError}</span>}
+              {clientNameError && <span className="error-message">{clientNameError}</span>}
             </td>
           </tr>
  
@@ -272,8 +272,9 @@ const Add_Requirement = () => {
       </select>
       {selectedITOption === "Others" && (
                   <input
+                  className="placeholder"
                     type="text"
-                    id="othersTextBox"
+                    id="textBox"
                     value={othersValue}
                     onChange={handleOthersChange}
                     placeholder="Enter other IT technology..."
@@ -302,8 +303,9 @@ const Add_Requirement = () => {
       </select>
       {selectedNon_ITOption === "Others" && (
                   <input
+                  className="placeholder"
                     type="text"
-                    id="othersTextBox"
+                    id="TextBox"
                     value={othersValue}
                     onChange={handleOthersChange}
                     placeholder="Enter other non-IT technology..."

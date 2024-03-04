@@ -62,132 +62,146 @@ function AssetRegistrations() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleNormalChairsChange = (value) => {
+    const sanitizedValue = value.replace(/^0+(?=\d)/, '0');
     setAccordionState((prevState) => ({
       ...prevState,
       Chairs: {
         ...prevState.Chairs,
-        normalChairs: value,
+        normalChairs: sanitizedValue,
       },
     }));
   };
   
   const handleWheelChairsChange = (value) => {
+    const sanitizedValue = value.replace(/^0+(?=\d)/, '0');
     setAccordionState((prevState) => ({
       ...prevState,
       Chairs: {
         ...prevState.Chairs,
-        wheelChairs: value,
+        wheelChairs: sanitizedValue,
       },
     }));
   };
 
 
   const handleACRemotesChange = (value) => {
+    const sanitizedValue = value.replace(/^0+(?=\d)/, '0');
     setAccordionState((prevState) => ({
       ...prevState,
       Remote: {
         ...prevState.Remote,
-        acRemotes: value,
+        acRemotes: sanitizedValue,
       },
     }));
   };
   
   const handleFanRemotesChange = (value) => {
+    
+    const sanitizedValue = value.replace(/^0+(?=\d)/, '0');
     setAccordionState((prevState) => ({
       ...prevState,
       Remote: {
         ...prevState.Remote,
-        fanRemotes: value,
+        fanRemotes: sanitizedValue,
       },
     }));
   };
   
   const handlePedestalsChange = (value) => {
+    const sanitizedValue = value.replace(/^0+(?=\d)/, '0');
     setAccordionState((prevState) => ({
       ...prevState,
       Pedestals: {
         ...prevState.Pedestals,
-        pedestals: value,
+        pedestals: sanitizedValue,
       },
     }));
   };
   
   const handleAirConditionersChange = (value) => {
+    const sanitizedValue = value.replace(/^0+(?=\d)/, '0');
     setAccordionState((prevState) => ({
       ...prevState,
       AirConditioners: {
         ...prevState.AirConditioners,
-        airConditioners: value,
+        airConditioners: sanitizedValue,
       },
     }));
   };
   
   const handleLaptopsChange = (value) => {
+    const sanitizedValue = value.replace(/^0+(?=\d)/, '0');
     setAccordionState((prevState) => ({
       ...prevState,
       OtherAssets: {
         ...prevState.OtherAssets,
-        laptops: value,
+        laptops: sanitizedValue,
       },
     }));
   };
   
   const handleMousesChange = (value) => {
+    const sanitizedValue = value.replace(/^0+(?=\d)/, '0');
     setAccordionState((prevState) => ({
       ...prevState,
       OtherAssets: {
         ...prevState.OtherAssets,
-        mouses: value,
+        mouses: sanitizedValue,
       },
     }));
   };
   
   const handleChargersChange = (value) => {
+    const sanitizedValue = value.replace(/^0+(?=\d)/, '0');
     setAccordionState((prevState) => ({
       ...prevState,
       OtherAssets: {
         ...prevState.OtherAssets,
-        chargers: value,
+        chargers: sanitizedValue,
       },
     }));
   };
   
   const handleBagsChange = (value) => {
+    const sanitizedValue = value.replace(/^0+(?=\d)/, '0');
     setAccordionState((prevState) => ({
       ...prevState,
       OtherAssets: {
         ...prevState.OtherAssets,
-        bags: value,
+        bags: sanitizedValue,
       },
     }));
   };
   
   const handleFansChange = (value) => {
+    const sanitizedValue = value.replace(/^0+(?=\d)/, '0');
     setAccordionState((prevState) => ({
       ...prevState,
       Fans: {
         ...prevState.Fans,
-        fans: value,
+        fans: sanitizedValue,
       },
     }));
   };
   
   const handleDustbinsChange = (value) => {
+    const sanitizedValue = value.replace(/^0+(?=\d)/, '0');
     setAccordionState((prevState) => ({
       ...prevState,
       Dustbins: {
         ...prevState.Dustbins,
-        dustbins: value,
+        dustbins: sanitizedValue,
       },
     }));
   };
   
   const handleTablesChange = (value) => {
+    const sanitizedValue = value.replace(/^0+(?=\d)/, '0');
     setAccordionState((prevState) => ({
       ...prevState,
       Tables: {
         ...prevState.Tables,
-        tables: value,
+        tables: sanitizedValue,
       },
     }));
   };

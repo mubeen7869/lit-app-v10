@@ -38,8 +38,9 @@ export default function Vender_registration() {
     formData.append("secondReviewed", secondReviewed);
     formData.append("cvFormat", cvFile);
     try {
-      // Using the vendorDetails function from http-common.js
-      await vendorDetails(formData, setSuccessMessage, resetFormFields, setErrorMessage);
+      await vendorDetails(formData);
+      setSuccessMessage("Vendor registered successfully.");
+      resetFormFields();
     } catch (error) {
       setErrorMessage(
         error.response?.data.message ||
@@ -47,7 +48,6 @@ export default function Vender_registration() {
       );
     }
   };
-   
  
  
   const resetFormFields = () => {
@@ -334,7 +334,7 @@ export default function Vender_registration() {
   accept=".doc, .docx"
   onChange={(e) => {
     const file = e.target.files[0];
-    const fileName = file.name.toLowerCase();
+    const fileName = file ? file.name.toLowerCase() : '';
     const allowedExtensions = ['.doc', '.docx'];
     const extension = fileName.substring(fileName.lastIndexOf('.'));
     if (!allowedExtensions.includes(extension)) {
@@ -343,11 +343,15 @@ export default function Vender_registration() {
       return;
     }
     setCvFile(file);
-    setErrorMessage('');
+    setErrorMessage(''); 
+
   }}
  
   required
 />
+
+{/* {errorMessage && <p className="error-message">{errorMessage}</p>} */}
+
           
  </div>
   </div>

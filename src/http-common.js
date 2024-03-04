@@ -67,26 +67,55 @@ export const loginClient = async (credentials) => {
   }
 };
  
-export const vendorDetails = async (formData, setSuccessMessage, resetFormFields, setErrorMessage) => {
-  try {
-    const response = await axios.post(
-      "http://localhost:3043/vendorDetails/save/vendorName",
-      formData
-    );
+// export const vendorDetails = async (formData, setSuccessMessage, resetFormFields, setErrorMessage) => {
+//   try {
+//     const response = await axios.post(
+//       "http://localhost:3043/vendorDetails/save/vendorName",
+//       formData
+//     );
  
-    if (response.status === 200) {
-      setSuccessMessage("Data posted successfully!");
-      resetFormFields();
-      console.log(response);
-    } else {
-      setErrorMessage("Failed to post data. Please try again.");
+//     if (response.status === 200) {
+//       setSuccessMessage("Data posted successfully!");
+//       resetFormFields();
+//       console.log(response);
+//     } else {
+//       setErrorMessage("Failed to post data. Please try again.");
+//     }
+//   } catch (error) {
+//     setErrorMessage(
+//       "Failed to connect to the server. Please try again later."
+//     );
+//   }
+// };
+
+
+// http-common.js
+
+// http-common.js
+
+// http-common.js
+
+export async function vendorDetails(formData) {
+  try {
+    const response = await fetch('http://localhost:3043/vendorDetails/save', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (!response.ok) {
+      throw new Error('Failed to register vendor');
     }
+
+    const data = await response.json();
+    return data;
   } catch (error) {
-    setErrorMessage(
-      "Failed to connect to the server. Please try again later."
-    );
+    throw error;
   }
-};
+}
+
+
+
+
  
 export const client = async (formData, setSuccessMessage, resetFormFields, setErrorMessage) => {
   try {

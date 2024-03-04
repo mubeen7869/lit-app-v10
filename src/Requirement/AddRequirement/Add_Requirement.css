@@ -13,6 +13,12 @@
   margin-right: auto;
 }
 
+
+.placeholder{
+  width: 5px;
+  height: 20px;
+
+}
 td {
   padding: 8px;
   border: 1px solid #ccc;
@@ -25,8 +31,17 @@ h2 {
   margin-bottom: 20px;
 }
 
-.options {
+.error-message {
   
+  color: red;
+}
+
+.textbox{
+  
+}
+
+.options {
+
   font-size: small;
 }
 
@@ -112,4 +127,7 @@ label {
     font-size: 20px;
     margin: 10px auto; /* Center the heading */
   }
+}
+.others{
+  font-size: xx-small;
 }
