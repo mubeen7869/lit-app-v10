@@ -13,6 +13,10 @@ function AssetRegistrations() {
 
   const handleFloorChange = (event) => {
     setFloor(event.target.value);
+    if (event.target.value === "second") {
+      // Reset form fields when second floor is selected
+      resetFormFields();
+    }
   };
 
 
