@@ -4,6 +4,7 @@ import { useState } from "react";
 import { registerUser } from "../http-common";
 
 export default function SignUp({ handleLogin }) {
+  const regexFirstName = /^[A-Za-z]+(?:\s[a-zA-Z]+)*\s*$/;
   const regexEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
   const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   const regexPhone = /^[6-9]\d{9}$/;
@@ -25,7 +26,7 @@ export default function SignUp({ handleLogin }) {
     const value = event.target.value.trim();
     const capitalizedValue = value.charAt(0).toUpperCase() + value.slice(1);
     setFirstName(capitalizedValue);
-    if (!/^[A-Za-z\s]+$/.test(capitalizedValue)){
+    if (!regexFirstName.test(capitalizedValue)){
       setFirstNameError('Please enter a valid first name');
     } else {
       setFirstNameError('');

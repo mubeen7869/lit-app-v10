@@ -31,6 +31,8 @@ import RequirementSearch from "./Requirement/RequirementSearch/RequirementSearch
 import RequirementManagement from "./Requirement/RequirementManagement/RequirementManagement";
 import AssetRegistrations from "./assets lap/assetregistration/AssetsRegister";
 import ITSearch from "./it_lap/it_lap_Search/ITSearch";
+import Co_w_registration from "./co-w lap/co-w Registration/Co-wRegistration";
+import FinanceRegister from "./finance lap/financeRegister/FinanceRegister";
 
 
 
@@ -76,6 +78,11 @@ function App() {
 
           <Route path="/home/assetsManagement1stFloor" element={<First_Floor/>}/>
           <Route path="/home/assetsManagement2stFloor" element={<Second_Floor/>}/> */}
+
+          <Route path="/home/co-wRegistration" element={<Co_w_registration/>}/>
+
+
+          <Route path="/home/financeRegister" element={<FinanceRegister/>}/>
 
           <Route path="/home/itlapregister" element={<ITRegistration/>}/>
           <Route path="/home/itsearch" element={<ITSearch/>}/>

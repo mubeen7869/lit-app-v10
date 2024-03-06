@@ -128,7 +128,7 @@ const Navbar = () => {
                 Finance Lap
                 <li className="dropdown">
                   <li className="sub-item11">
-                    <Link to={"/home/financeRegistration"}> Registration</Link>
+                    <Link to={"/home/financeRegister"}> Registration</Link>
                   </li>
                   <li className="sub-item22">
                     <Link to={"/home/financeSearch"}>Search</Link>
@@ -163,7 +163,7 @@ const Navbar = () => {
                 CO-W Lap
                 <li className="dropdown">
                   <li className="sub-item1">
-                    <Link to={"/home/clientRegistration"}>Registration</Link>
+                    <Link to={"/home/co-wRegistration"}>Registration</Link>
                   </li>
                   <li className="sub-item2">
                     <Link to={"/home/clientSearch"}>Search</Link>
