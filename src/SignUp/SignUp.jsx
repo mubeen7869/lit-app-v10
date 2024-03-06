@@ -25,12 +25,13 @@ export default function SignUp({ handleLogin }) {
     const value = event.target.value.trim();
     const capitalizedValue = value.charAt(0).toUpperCase() + value.slice(1);
     setFirstName(capitalizedValue);
-    if (!/^[A-Za-z]+(?: [A-Za-z]+)?$/.test(capitalizedValue)) {
+    if (!/^[A-Za-z\s]+$/.test(capitalizedValue)){
       setFirstNameError('Please enter a valid first name');
     } else {
       setFirstNameError('');
     }
-  };
+};
+
 
   const handleLastNameChange = (event) => {
     const value = event.target.value.trim();

@@ -3,6 +3,7 @@
     flex-direction: row;
     min-width: 30%;
     height:100vh;
+    overflow: hidden;
 }
 .LeftContainer_header{
     color:white;

@@ -51,7 +51,7 @@ const Add_Requirement = () => {
  
   const handleFullNameChange = (event) => {
     const value = event.target.value;
-    if (/^[a-zA-Z\s]*$/.test(value) || value === "") {
+    if (/^[a-zA-Z]+(?:\s[a-zA-Z]+)*\s*$/.test(value) || value === "") {
       setFullName(value);
       setFullNameError("");
     } else {
@@ -61,17 +61,18 @@ const Add_Requirement = () => {
  
   const handleExperienceChange = (event) => {
     const value = event.target.value;
-    if (/^\d*$/.test(value) || value === "") {
+    if (/^\d{0,2}$/.test(value) || value === "") {
       setExperience(value);
       setExperienceError("");
     } else {
-      setExperienceError("Only numbers are allowed.");
+      setExperienceError("Please enter up to two numbers.");
     }
-  };
+};
+
  
   const handleClientNameChange = (event) => {
     const value = event.target.value;
-    if (/^[a-zA-Z\s]*$/.test(value) || value === "") {
+    if (/^[a-zA-Z]+(?:\s[a-zA-Z]+)*\s*$/.test(value) || value === "") {
       setClientName(value);
       setClientNameError("");
     } else {

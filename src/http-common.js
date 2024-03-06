@@ -43,17 +43,25 @@ export const loginUser = async (credentials) => {
  
 export const registerUser = async (hr) => {
   try {
-    console.log("hi" + hr);
+   
     const response = await api.post('/littuss/hr/hrregister', hr);
-    console.log("end");
     alert("successfully registered");
     return response.data;
   } catch (error) {
-    console.error('Registration failed:', error);
+    alert('Registration failed! User Already registerd:', error);
     throw error;
   }
 };
  
+// export const checkUserExistsByEmail = async (email) => {
+//   try {
+//     const response = await api.get(`/checkUserExists?email=${email}`);
+//     return response.data;
+//   } catch (error) {
+//     console.error('Error checking user existence:', error);
+//     throw error;
+//   }
+// };
 export const loginClient = async (credentials) => {
   try {
     const response = await api.post('/client', credentials);

@@ -66,8 +66,8 @@ const Requirement_Search = () => {
             <th>Sector</th>
             <th>Technology</th>
             <th>Gender</th>
-            <th>Status</th>
-            <th>Terms & Conditions</th>
+            {/* <th>Status</th>
+            <th>Terms & Conditions</th> */}
           </tr>
         </thead>
         <tbody>
